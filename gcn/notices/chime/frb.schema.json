@@ -12,17 +12,13 @@
     { "$ref": "../core/Localization.schema.json" }
   ],
   "properties": {
-    "alert_kind": {
-      "type": "string",
-      "description": "The kind of alert (detection or subsequent). Similar meaning to alert_type"
-    },
     "known_source": {
       "type": "string",
       "description": "Transient Name Server name of the known source (if a repeating FRB source)"
     },
     "snr": {
       "type": "number",
-      "description": "Signal-to-noise ratio of the burst"
+      "description": "Signal-to-noise ratio of the burst [dimensionless]"
     },
     "dm": {
       "type": "number",
@@ -34,15 +30,11 @@
     },
     "dm_gal_ne_2001_max": {
       "type": "number",
-      "description": "Estimated contribution to the dispersion measure from the Galaxy using the NE2001 model."
+      "description": "Estimated contribution to the dispersion measure from the Galaxy using the NE2001 model [pc/cm^3]"
     },
     "dm_gal_ymw_2016_max": {
       "type": "number",
-      "description": "Estimated contribution to the dispersion measure from the Galaxy using the YMW2016 model."
-    },
-    "trigger_time_error": {
-      "type": "number",
-      "description": "Error on the trigger time [s]"
+      "description": "Estimated contribution to the dispersion measure from the Galaxy using the YMW2016 model [pc/cm^3]"
     },
     "trigger_time_inf_freq": {
       "type": "string",
@@ -56,29 +48,25 @@
       "type": "number",
       "description": "A machine learning score from 0-1 separating RFI (0) from an astrophysical signal (1)"
     },
-    "probability": {
+    "association_probability": {
       "type": "number",
       "description": "A score of known source association probability from poorly associated (0) to confidently associated (1)"
     },
     "sampling_time": {
       "type": "number",
-      "description": "The time resolution of the real-time FRB search."
-    },
-    "bandwidth": {
-      "type": "number",
-      "description": "The bandwidth of the real-time FRB search."
+      "description": "The time resolution of the real-time FRB search [ms]"
     },
     "centre_frequency": {
       "type": "number",
-      "description": "The centre frequency of the real-time FRB search."
+      "description": "The centre frequency of the real-time FRB search [MHz]"
     },
     "npol": {
       "type": "number",
-      "description": "The number of polarizations of the real-time FRB search."
+      "description": "The number of polarizations of the real-time FRB search"
     },
     "tsys": {
       "type": "number",
-      "description": "The system temperature of the real-time FRB search."
+      "description": "The system temperature of the real-time FRB search [K]"
     },
     "update_message": {
       "type": "string",
